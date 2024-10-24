@@ -25,7 +25,7 @@ jobs:
           echo "$HOST_NAME"
 
           # Nos conectamos a la instancia EC2 usando SSH
-          ssh -o StrictHostKeyChecking=no -i private_key.pem ${USER_NAME}@${HOST_NAME}'
+          ssh -o StrictHostKeyChecking=no -i private_key.pem ${USER_NAME}@${HOST_NAME} '
 
           # Verificamos si el directorio es un repositorio Git
           if [ ! -d "/home/ubuntu/caicedo_arias/.git" ]; then
