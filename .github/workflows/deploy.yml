@@ -22,6 +22,8 @@ jobs:
           # Guardamos la llave privada y le asignamos los permisos correctos
           echo "$PRIVATE_KEY" > private_key.pem && chmod 400 private_key.pem
 
+          echo "$HOST_NAME"
+
           # Nos conectamos a la instancia EC2 usando SSH
           ssh -o StrictHostKeyChecking=no -i private_key.pem ${USER_NAME}@${HOST_NAME}'
 
