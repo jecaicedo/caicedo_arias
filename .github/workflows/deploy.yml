@@ -32,4 +32,7 @@ jobs:
             # Si no es un repositorio Git, clonamos el repositorio
             git clone https://github.com/jecaicedo/caicedo_arias /home/ubuntu/caicedo_arias;
           fi
+
+          docker compose build
+          docker compose up -d
           '
