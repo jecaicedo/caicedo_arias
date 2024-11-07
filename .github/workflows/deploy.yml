@@ -33,5 +33,7 @@ jobs:
             git clone https://github.com/jecaicedo/caicedo_arias /home/ubuntu/caicedo_arias;
           fi
 
+          cd /home/ubuntu/caicedo_arias &&
+
           make deploy
           '
