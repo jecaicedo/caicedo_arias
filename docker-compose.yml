@@ -2,7 +2,7 @@ services:
   #  --------------------------------------------
   app:
     build:
-      context: ./TrabajoApps-master
+      context: ./productos
       dockerfile: Dockerfile
     container_name: java-app
     depends_on:
@@ -39,7 +39,7 @@ services:
       - "8001:8080"
     networks:
       - app-network
-#  ---------------------------------------------
+#  --------------------------------------------
 networks:
   app-network:
     driver: bridge

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Productos y Usuarios</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<header>
+    <h1>Gestión de Productos y Usuarios</h1>
+    <nav>
+        <ul>
+            <li><a th:href="@{/products}">Productos</a></li>
+            <li><a th:href="@{/users}">Usuarios</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div th:insert="~{::content}"></div>
+</main>
+<footer>
+    <p>&copy; 2024 - Gestión de Productos y Usuarios</p>
+</footer>
+</body>
+</html>
