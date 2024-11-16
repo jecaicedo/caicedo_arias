@@ -18,6 +18,11 @@
         <td th:text="${product.price}"></td>
         <td th:text="${product.brand}"></td>
         <td th:text="${product.store}"></td>
+        <td>
+            <a th:href="@{/products/edit/{id}(id=${product.id})}" class="btn btn-warning">Editar</a>
+            <a th:href="@{/products/delete/{id}(id=${product.id})}" class="btn btn-danger" 
+               onclick="return confirm('¿Estás seguro de eliminar este producto?')">Eliminar</a>
+        </td>
     </tr>
 </table>
 <a th:href="@{/products/new}">Agregar Producto</a>
