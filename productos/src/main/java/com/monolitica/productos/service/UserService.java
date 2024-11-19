@@ -1,5 +1,6 @@
 package com.monolitica.productos.service;
 
+import com.monolitica.productos.model.Product;
 import com.monolitica.productos.model.User;
 import com.monolitica.productos.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,12 @@ public class UserService {
 
     public User getUserById(Long id) {
         return userRepository.findById(id).orElse(null);
+    }
+
+    public void updateUser(User user) {
+        if (userRepository.existsById(user.getId())) {
+            userRepository.save(user);
+        }
     }
 
     public void deleteUser(Long id) {

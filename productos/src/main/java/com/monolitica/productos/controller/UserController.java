@@ -1,5 +1,6 @@
 package com.monolitica.productos.controller;
 
+import com.monolitica.productos.model.Product;
 import com.monolitica.productos.model.User;
 import com.monolitica.productos.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ public class UserController {
     @GetMapping
     public String getAllUsers(Model model) {
         model.addAttribute("users", userService.getAllUsers());
-        return "user";
+        return "users";
     }
 
     @GetMapping("/new")
@@ -37,6 +38,12 @@ public class UserController {
         User user = userService.getUserById(id);
         model.addAttribute("user", user);
         return "user_form";
+    }
+
+    @PostMapping("/update")
+    public String updateUser(@ModelAttribute User user) {
+        userService.updateUser(user);
+        return "redirect:/users";
     }
 
     @GetMapping("/delete/{id}")

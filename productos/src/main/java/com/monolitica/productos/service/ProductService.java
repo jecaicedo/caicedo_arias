@@ -25,6 +25,12 @@ public class ProductService {
         return productRepository.findById(id).orElse(null);
     }
 
+    public void updateProduct(Product product) {
+        if (productRepository.existsById(product.getId())) {
+            productRepository.save(product);
+        }
+    }
+
     public void deleteProduct(Long id) {
         productRepository.deleteById(id);
     }
