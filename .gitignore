@@ -1,0 +1,7 @@
+# Ignorar directorios y archivos de MySQL
+MySQL/mysql_data/
+*.ibd
+*.log
+*.pem
+*.sock
+*.cnf
